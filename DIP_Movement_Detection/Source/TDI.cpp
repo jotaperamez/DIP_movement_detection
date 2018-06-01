@@ -13,7 +13,7 @@
 
 int preprocess(C_Image in);
 int size_diff(C_Image in_base, C_Image in_diff);
-void segmentation(C_Image in_base, C_Image in_diff, int max, int min, double base_pp, double diff_pp, int reduce, int expand);
+C_Image segmentation(C_Image in_base, C_Image in_diff, int max, int min, double base_pp, double diff_pp, int reduce, int expand);
 C_Image dip_erosion(C_Image in_base, int in_erosion);
 C_Image dip_dilatation(C_Image in_erosed);
 
@@ -72,7 +72,8 @@ int main(int argc, char **argv) {
 	cout << "Valores establecidos.\n";
 
 	cout << "Segmentando ... \n";
-	segmentation(in_base, in_diff, max, min, in_base_pp, in_diff_pp, erosion, dilatation);
+	C_Image out_img = segmentation(in_base, in_diff, max, min, in_base_pp, in_diff_pp, erosion, dilatation);
+
 	cout << "\n Segmentacion realizada con exito. Se han generado los archivos\n en el directorio /Run de su proyecto.";
 
 	return 0;
@@ -90,7 +91,6 @@ int preprocess(C_Image in) {
 			size++;
 		}
 	}
-
 	return sum / size;
 }
 int size_diff(C_Image in_base, C_Image in_diff) {
@@ -154,7 +154,7 @@ int size_diff(C_Image in_base, C_Image in_diff) {
 	}
 	return size_diff;
 }
-void segmentation(C_Image in_base, C_Image in_diff, int max, int min, double base_pp, double diff_pp, int reduce, int expand) {
+C_Image segmentation(C_Image in_base, C_Image in_diff, int max, int min, double base_pp, double diff_pp, int reduce, int expand) {
 	C_Image::IndexT row, col;
 	C_Image out = in_base;
 
@@ -210,6 +210,8 @@ void segmentation(C_Image in_base, C_Image in_diff, int max, int min, double bas
 		reducctio = expandio;
 	}
 	expandio.WriteBMP("OUT_FINAL.bmp");
+
+	return expandio;
 }
 C_Image dip_erosion(C_Image in_base, int in_erosion) {
 	C_Image::IndexT row, col;

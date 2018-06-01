@@ -31,3 +31,13 @@ Press ENTER to continue.
 Press ENTER to continue.
 Press ENTER to continue.
 Press ENTER to continue.
+TDI E (c_image_bmp,  233) Can't write an empty matrix
+TDI E (c_matrix,  246) Index out of matrix boundaries
+TDI E (c_matrix,  246) Index out of matrix boundaries
+TDI E (c_image_bmp,  233) Can't write an empty matrix
+TDI E (c_matrix,  246) Index out of matrix boundaries
+TDI E (c_matrix,  246) Index out of matrix boundaries
+TDI W (c_image_bmp,  253) Palette size must be 65536
+TDI W (c_matrix_io,  350) No. bits/pixel not standard : 16
+TDI W (c_image_bmp,  253) Palette size must be 65536
+TDI W (c_matrix_io,  350) No. bits/pixel not standard : 16
