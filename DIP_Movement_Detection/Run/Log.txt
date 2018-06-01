@@ -14,17 +14,8 @@ Press ENTER to continue.
 Press ENTER to continue.
 Press ENTER to continue.
 Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
-Press ENTER to continue.
+TDI E (c_image_bmp,  160) File doesn't exist : D3-BMP
+TDI E (c_image_bmp,  160) File doesn't exist : D3-BMP
 Press ENTER to continue.
 Press ENTER to continue.
 Press ENTER to continue.
